@@ -1,0 +1,21 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <data>
+      <entry key="Android.RunAndroidAvdManager">
+        <ActionSummary times="2" last="1624301916458" />
+      </entry>
+      <entry key="EditorBackSpace">
+        <ActionSummary times="8" last="1624300588743" />
+      </entry>
+      <entry key="Run">
+        <ActionSummary times="6" last="1624882177429" />
+      </entry>
+      <entry key="WelcomeScreen.CreateNewProject">
+        <ActionSummary times="1" last="1624300569045" />
+      </entry>
+      <entry key="com.intellij.openapi.ui.DialogWrapper$5">
+        <ActionSummary times="2" last="1624881412044" />
+      </entry>
+    </data>
+  </component>
+</application>

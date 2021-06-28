@@ -1,0 +1,20 @@
+https://www.tecmint.com/things-to-do-after-installing-ubuntu-20-04/
+
+https://kifarunix.com/install-and-setup-i3-windows-manager-on-ubuntu-20-04/
+
+https://askubuntu.com/questions/363346/how-to-permanently-switch-caps-lock-and-esc
+
+https://wallhaven.cc/
+
+https://stackoverflow.com/questions/59221289/can-i-hide-the-tabs-in-gnome-terminal
+
+sudo chmod +x filename.run
+
+xprop | grep -i 'class'  and then click on the program to print class name
+
+https://github.com/debxp/dmenu-scripts/blob/master/dmenu-websearch
+
+https://unix.stackexchange.com/questions/335515/i3-dmenu-does-not-browse-path
+
+clipboard diodon: https://esite.ch/2015/07/using-custom-shortcuts-of-de-as-diodon-hotkey/
+
