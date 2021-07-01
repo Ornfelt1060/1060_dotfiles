@@ -9,7 +9,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'justinmk/vim-sneak'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'morhetz/gruvbox'
 Plug 'w0ng/vim-hybrid'
 Plug 'sainnhe/sonokai'
@@ -19,11 +20,13 @@ Plug 'tpope/vim-commentary'
 Plug 'mhinz/vim-startify'
 Plug 'vimwiki/vimwiki'
 Plug 'dracula/vim'
+Plug 'jalvesaq/vimcmdline'
+"Plug 'nvim-treesitter/nvim-treesitter'
 
 " Initialize plugin system
 call plug#end()
 
-let g:python3_host_prog='~\anaconda3\envs\pynvim\python.exe'
+"let g:python3_host_prog='/bin/python3'
 set runtimepath+=~/.vim
 set rtp+=~/.fzf
 " Get syntax highlighting
@@ -201,26 +204,26 @@ autocmd FileType vtxt,text inoremap <line<Tab> ---------------------------------
 autocmd FileType vtxt,text inoremap <date<Tab> <-- <C-R>=strftime("%Y-%m-%d %a")<CR><Esc>A -->
 
 " Statusline
-set statusline=
-set laststatus=2
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-set statusline+=%#Difftext#
-set statusline+=\ %M "track if changes has been made to file
-set statusline+=\ %y "show filetype
-set statusline+=\ %r "ReadOnly flag
-set statusline+=\ %F "show full path to file
-set statusline+=%= "right side settings
-set statusline+=%#DiffChange#
-set statusline+=\ %c:%l/%L "display column and line pos
-set statusline+=\ %p%% "display percentage traversed of file
+"set statusline=
+"set laststatus=2
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"set statusline+=%#Difftext#
+"set statusline+=\ %M "track if changes has been made to file
+"set statusline+=\ %y "show filetype
+"set statusline+=\ %r "ReadOnly flag
+"set statusline+=\ %F "show full path to file
+"set statusline+=%= "right side settings
+"set statusline+=%#DiffChange#
+"set statusline+=\ %c:%l/%L "display column and line pos
+"set statusline+=\ %p%% "display percentage traversed of file
 
 " Syntastic
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 0
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
 " Better tabbing
 vnoremap < <gv
@@ -239,12 +242,12 @@ func! CompileRun()
 		exec "!%:r.exe"
         "exec "!time ./%<"
     elseif &filetype == 'java'
-        exec "!javac %"
-        exec "!java -cp %:p:h %:t:r"
+        "exec "!java -cp %:p:h %:t:r"
+        exec "!java %"
     elseif &filetype == 'sh'
         exec "!time bash %"
     elseif &filetype == 'python'
-        exec "!python %"
+        exec "!python3 %"
     elseif &filetype == 'html'
         exec "!firefox % &"
     elseif &filetype == 'javascript'
@@ -341,3 +344,5 @@ imap <C-BS> <C-W>a
 highlight Normal guibg=none
 highlight NonText guibg=none
 highlight LineNr cterm=NONE ctermfg=grey gui=NONE guifg=grey guibg=NONE term=bold
+
+set ttimeoutlen=100
