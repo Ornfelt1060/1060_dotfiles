@@ -100,7 +100,7 @@ bindsym $mod+Shift+Right move right
 # split in vertical orientation
 bindsym $mod+s split v
 # Switch between split orientation
-bindsym $mod+z split h
+bindsym $mod+less split h
 
 bindsym $mod+v exec ~/.bin/scripts/clip_history.sh
 bindsym $mod+Shift+v exec ~/.bin/scripts/qr_clip.sh
@@ -109,7 +109,7 @@ bindsym $mod+Shift+v exec ~/.bin/scripts/qr_clip.sh
 bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+Shift+s layout stacking
-bindsym $mod+Shift+w layout tabbed
+bindsym $mod+g layout tabbed
 bindsym $mod+t layout toggle split
 
 # toggle tiling / floating
@@ -126,7 +126,8 @@ bindsym $mod+Shift+a focus parent
 # open tmux
 bindsym $mod+a exec i3-sensible-terminal -e tmux
 # Open nautilus
-bindsym $mod+w exec nautilus --no-desktop
+#bindsym $mod+w exec nautilus --no-desktop
+bindsym $mod+w exec nautilus -w --no-desktop
 # open ranger
 bindsym $mod+e exec i3-sensible-terminal -e ranger
 

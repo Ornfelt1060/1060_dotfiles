@@ -114,9 +114,8 @@ nnoremap <M-r> gqG<C-o>zz
 
 " Neovim FZF
 nnoremap <M-a> :FZF <cr>
-nnoremap <M-s> :FZF ../..<cr>
 nnoremap <M-d> :FZF ../../..<cr>
-nnoremap <M-o> :FZF c:/<cr>
+nnoremap <M-o> :FZF /<cr>
 
 " NERDTree
 nnoremap <M-w> :NERDTreeToggle %:p<CR>
@@ -146,9 +145,11 @@ xnoremap <leader>j :join<CR>
 nmap <leader>z <Plug>Zoom
 
 " Tab maps
-nnoremap <M-t> :tabe<cr>
-nnoremap <M-v> :vsp<cr>
 nnoremap <M-q> :q<cr>
+nnoremap <M-t> :tabe<cr>
+nnoremap <M-s> :split<cr>
+nnoremap <M-Enter> :vsp<cr>
+nnoremap <M-<> :vsp<cr>
 
 " Go to tab by number
 noremap <leader>1 1gt
@@ -178,7 +179,7 @@ nnoremap <leder>o <C-^>
 " Copy everything from file into clipboard
 inoremap <C-a> <Esc>gg"*yG
 " Copy selection to clipboard
-noremap <C-c> "*y
+noremap <C-c> y
 
 " Filetype shortcuts
 autocmd FileType html inoremap <i<Tab> <em></em> <Space><++><Esc>/<<Enter>GNi
@@ -310,14 +311,13 @@ map <S-Insert> <MiddleMouse>
 map! <S-Insert> <MiddleMouse>
 inoremap <S-Insert> <Esc><MiddleMouse>A
 
-" Coc config
+" Coc config deleted: \ 'coc-python', at: 21-07-02
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-pairs',
   \ 'coc-eslint',
   \ 'coc-prettier',
   \ 'coc-java',
-  \ 'coc-python',
   \ 'coc-tsserver',
   \ 'coc-json',
   \ ]
@@ -345,4 +345,4 @@ highlight Normal guibg=none
 highlight NonText guibg=none
 highlight LineNr cterm=NONE ctermfg=grey gui=NONE guifg=grey guibg=NONE term=bold
 
-set ttimeoutlen=100
+set clipboard=unnamedplus
