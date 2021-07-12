@@ -149,5 +149,10 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:${HOME}/.bin/scripts/"
+precmd() { eval "$PROMPT_COMMAND" }
+export PROMPT_COMMAND="pwd > /tmp/whereami"
 #neofetch --ascii_distro DarkOS
 ~/.bin/scripts/hello.sh
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+# This should also work 
+#export FZF_DEFAULT_COMMAND="find -L"

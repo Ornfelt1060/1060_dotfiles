@@ -18,3 +18,6 @@ https://unix.stackexchange.com/questions/335515/i3-dmenu-does-not-browse-path
 
 clipboard diodon: https://esite.ch/2015/07/using-custom-shortcuts-of-de-as-diodon-hotkey/
 
+run xev to find keys...
+
+apt list --installed >> installed.txt
