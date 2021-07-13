@@ -60,7 +60,6 @@ floating_modifier $mod
 # https://i3wm.org/docs/userguide.html#_focus_follows_mouse (no focus on mouseover)
 focus_follows_mouse no
 
-
 # start a terminal in wd
 #bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec ~/.config/i3/i3_shell.sh
@@ -182,14 +181,14 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 assign [class="Firefox"] $workspace1
+assign [class="Chromium"] $workspace1
 assign [class="studio"] $workspace3
 assign [class="Eclipse"] $workspace3
 assign [class="Code"] $workspace3
-assign [class="steam"] $workspace4
-assign [class="vlc"] $workspace4
+assign [class="Steam"] $workspace4
+assign [class="Vlc"] $workspace4
 assign [class="Spotify"] $workspace5
-assign [class="Spotifywm"] $workspace5
-assign [class="spotifywm"] $workspace5
+for_window [class="Spotify"] move to workspace $workspace5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
