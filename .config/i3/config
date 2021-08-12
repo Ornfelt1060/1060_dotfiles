@@ -289,7 +289,7 @@ exec_always exec diodon
 # Lock screen 
 bindsym $mod+Shift+x exec i3lock-fancy
 #Suspend 
-bindsym $mod+Shift+minus exec i3lock-fancy; exec systemctl suspend
+bindsym $mod+Shift+period exec i3lock-fancy; exec systemctl suspend
 
 bindsym $mod+c exec gnome-calculator
 for_window [class="Gnome-calculator"] floating enable, move position 900 px 580 px, exec xdotool search --class Gnome-calculator getwindowpid -- windowsize %@ 250 195
@@ -297,3 +297,10 @@ for_window [class="Gnome-calculator"] floating enable, move position 900 px 580 
 # Alternating layout
 exec_always ~/.bin/scripts/i3-alternating-layout/alternating_layouts.py
 #exec --no-startup-id ~/.bin/scripts/i3-alternating-layout/alternating_layouts.py
+
+for_window [class="^.*"] border pixel 2
+
+bindsym $mod+plus gaps inner current plus 5
+bindsym $mod+minus gaps inner current minus 5
+bindsym $mod+Shift+plus	gaps outer current plus 5
+bindsym $mod+Shift+minus gaps outer current minus 5
